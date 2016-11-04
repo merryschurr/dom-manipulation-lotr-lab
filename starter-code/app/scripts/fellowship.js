@@ -1,4 +1,3 @@
-console.log("Linked.");
 
 // Dramatis Personae
 var hobbits = [
@@ -24,6 +23,31 @@ var body = document.querySelector('body');
 
 
 function makeMiddleEarth() {
+  var section = document.createElement("section");
+  section.setAttribute("id", "middle-earth");
+  document.body.appendChild(section);
+
+  var article = document.createElement("article");
+  section.appendChild(article);
+
+  var h1 = document.createElement("h1");
+  h1.textContent = "The Shire";
+  article.appendChild(h1)
+
+  var article = document.createElement("article");
+  section.appendChild(article);
+
+  var h2 = document.createElement("h1");
+  h2.textContent = "Rivendell";
+  article.appendChild(h2)
+
+  var article = document.createElement("article");
+  section.appendChild(article);
+
+  var h3 = document.createElement("h1");
+  h3.textContent = "Mordor";
+  article.appendChild(h3)
+
   // create a section tag with an id of middle-earth
   // inside, add each land as an article tag
   // inside each article tag include an h1 with the name of the land
@@ -36,14 +60,35 @@ makeMiddleEarth();
 // Part 2
 
 function makeHobbits() {
+
+ var hobbitList = document.createElement("ul");
+ console.log(hobbitList);
+
+ var theShire = document.querySelector("article");
+ for(var i = 0; i < hobbits.length; i++)
+ console.log(hobbits[i]);
+
+ var hobbitItem = document.createElement ("li"); 
+ hobbitItem.innerHTML = hobbitList.innerHTML + array[i];
+}
+
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
-}
+
 
 
 // Part 3
 
 function keepItSecretKeepItSafe() {
+
+ var ring = document.create("div");
+ ring.setAttribute("id", "the-ring");
+ ring.setAttribute("class", "magic-imbued-jewelry");
+
+ ring.addEventListener("click", nazgul_screech);
+ var ringMaster = document.querySelector('li');
+ ringMaster.appendChild(Frodo);
+
   // create a div with an id of 'the-ring'
   // give the div a class of 'magic-imbued-jewelry'
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
@@ -55,6 +100,15 @@ function keepItSecretKeepItSafe() {
 
 
 function makeBuddies() {
+
+  var aside = document.createElement("aside");
+  var buddiesList = document.createElement("ul");
+  ring.setAttribute("id", "buddies")
+
+  var ul = document.getElementById("buddies");
+  var rivendell = document.querySelector ('li')
+  rivendell.appendChild(buddiesList)
+
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
