@@ -72,8 +72,8 @@ console.log("landArticles");
     hobbitList.appendChild(hobbit);
 
     theShire.appendChild(hobbitList);
-    rivendell.appendChild(hobbitList);
-    mordor.appendChild(hobbitList);
+    // rivendell.appendChild(hobbitList);
+    // mordor.appendChild(hobbitList);
 
   }
 
@@ -127,10 +127,13 @@ var aside = document.createElement("aside");
 
  var ul = document.getElementById("buddiesList");
  for(var i = 0; i < buddies.length; i++) {
-   var buddyItem = document.createElement('li');
+
+ var buddyItem = document.createElement('li');
  buddyItem.innerHTML = buddies[i];
  buddiesList.appendChild(buddyItem);
+
 }
+
  aside.appendChild(buddiesList);
 
 
